@@ -102,7 +102,7 @@ index_html = """
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-<title>MovieZone - Your Entertainment Hub</title>
+<title>MovieFlix9u - Your Entertainment Hub</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap');
   :root { --netflix-red: #E50914; --netflix-black: #141414; --text-light: #f5f5f5; --text-dark: #a0a0a0; --nav-height: 60px; }
@@ -191,7 +191,7 @@ index_html = """
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-<header class="main-nav"><a href="{{ url_for('home') }}" class="logo">MovieZone</a><form method="GET" action="/" class="search-form"><input type="search" name="q" class="search-input" placeholder="Search..." value="{{ query|default('') }}" /></form></header>
+<header class="main-nav"><a href="{{ url_for('home') }}" class="logo">MovieFlix9u</a><form method="GET" action="/" class="search-form"><input type="search" name="q" class="search-input" placeholder="Search..." value="{{ query|default('') }}" /></form></header>
 <main>
   {% macro render_movie_card(m) %}
     <a href="{{ url_for('movie_detail', movie_id=m._id) }}" class="movie-card">
@@ -247,7 +247,7 @@ index_html = """
         <i class="fa-brands fa-telegram telegram-icon"></i>
         <h2>Join Our Telegram Channel</h2>
         <p>Get the latest movie updates, news, and direct download links right on your phone!</p>
-        <a href="https://t.me/+60goZWp-FpkxNzVl" target="_blank" class="telegram-join-button"><i class="fa-brands fa-telegram"></i> Join Main Channel</a>
+        <a href="https://t.me/MovieFlix9u" target="_blank" class="telegram-join-button"><i class="fa-brands fa-telegram"></i> Join Main Channel</a>
     </div>
   {% endif %}
 </main>
@@ -269,7 +269,7 @@ detail_html = """
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-<title>{{ movie.title if movie else "Content Not Found" }} - MovieZone</title>
+<title>{{ movie.title if movie else "Content Not Found" }} - MovieFlix9u</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap');
   :root { --netflix-red: #E50914; --netflix-black: #141414; --text-light: #f5f5f5; --text-dark: #a0a0a0; }
@@ -364,7 +364,7 @@ function copyToClipboard(text) { navigator.clipboard.writeText(text).then(() => 
 
 genres_html = """
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" /><title>{{ title }} - MovieZone</title>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" /><title>{{ title }} - MovieFlix9u</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap');
   :root { --netflix-red: #E50914; --netflix-black: #141414; --text-light: #f5f5f5; }
@@ -396,7 +396,7 @@ watch_html = """
 
 admin_html = """
 <!DOCTYPE html>
-<html><head><title>Admin Panel - MovieZone</title><meta name="viewport" content="width=device-width, initial-scale=1" /><style>
+<html><head><title>Admin Panel - MovieFlix9u</title><meta name="viewport" content="width=device-width, initial-scale=1" /><style>
 :root { --netflix-red: #E50914; --netflix-black: #141414; --dark-gray: #222; --light-gray: #333; --text-light: #f5f5f5; }
 body { font-family: 'Roboto', sans-serif; background: var(--netflix-black); color: var(--text-light); padding: 20px; }
 h2, h3 { font-family: 'Bebas Neue', sans-serif; color: var(--netflix-red); } h2 { font-size: 2.5rem; margin-bottom: 20px; } h3 { font-size: 1.5rem; margin: 20px 0 10px 0;}
@@ -481,7 +481,7 @@ hr.section-divider { border: 0; height: 2px; background-color: var(--light-gray)
 
 edit_html = """
 <!DOCTYPE html>
-<html><head><title>Edit Content - MovieZone</title><meta name="viewport" content="width=device-width, initial-scale=1" /><style>
+<html><head><title>Edit Content - MovieFlix9u</title><meta name="viewport" content="width=device-width, initial-scale=1" /><style>
 :root { --netflix-red: #E50914; --netflix-black: #141414; --dark-gray: #222; --light-gray: #333; --text-light: #f5f5f5; }
 body { font-family: 'Roboto', sans-serif; background: var(--netflix-black); color: var(--text-light); padding: 20px; }
 h2, h3 { font-family: 'Bebas Neue', sans-serif; color: var(--netflix-red); } h2 { font-size: 2.5rem; margin-bottom: 20px; } h3 { font-size: 1.5rem; margin: 20px 0 10px 0;}
@@ -575,7 +575,7 @@ button[type="submit"], .add-btn { background: var(--netflix-red); color: white; 
 
 contact_html = """
 <!DOCTYPE html>
-<html lang="bn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact Us / Report - MovieZone</title><style>
+<html lang="bn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact Us / Report - MovieFlix9u</title><style>
 :root { --netflix-red: #E50914; --netflix-black: #141414; --dark-gray: #222; --light-gray: #333; --text-light: #f5f5f5; }
 body { font-family: 'Roboto', sans-serif; background: var(--netflix-black); color: var(--text-light); padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
 .contact-container { max-width: 600px; width: 100%; background: var(--dark-gray); padding: 30px; border-radius: 8px; }
@@ -1074,7 +1074,7 @@ def telegram_webhook():
                     print(f"Error processing /start command: {e}")
                     requests.get(f"{TELEGRAM_API_URL}/sendMessage", params={'chat_id': chat_id, 'text': "An unexpected error occurred while processing your request."})
             else:
-                requests.get(f"{TELEGRAM_API_URL}/sendMessage", params={'chat_id': chat_id, 'text': "আমাদের ওয়েবসাইটে আপনাকে স্বাগতম."})
+                requests.get(f"{TELEGRAM_API_URL}/sendMessage", params={'chat_id': chat_id, 'text': "আমাদের movieflix9u.onrender.com ওয়েবসাইটে আপনাকে স্বাগতম,আমাদের অপিসিয়াল চ্যানেলে জয়েন করুন https://t.me/MovieFlix9u চ্যানেলে জয়েন করার জন্য আপনাকে ধন্যবাদ."})
 
     return jsonify(status='ok')
 
